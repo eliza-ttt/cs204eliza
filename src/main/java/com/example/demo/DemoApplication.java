@@ -15,7 +15,12 @@ public class DemoApplication {
 
 	@GetMapping("/")
 	public String index(){
-		return "<h1>Hello Eliza!</h1>";
+		return "<h1>Hello Eliza!<a href='/about'>to about</a></h1>";
+	}
+
+	@GetMapping("/about")
+	public String about() {
+		return "<h1>This is the page about!</h1>";
 	}
 
 }
